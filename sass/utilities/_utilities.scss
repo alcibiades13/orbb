@@ -1,0 +1,48 @@
+/*=================================
+=            Utilities            =
+=================================*/
+
+
+/* Alignining */
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.align-left {
+	@include float-left;
+}
+
+.align-right {
+	@include float-right;
+}
+
+.clearfix {
+	@include clearfix;
+}
+
+.vertical-center {
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	justify-content: center;
+}
+
+
+/* Transitions */
+
+.ease {
+	transition: all 0.3s ease-in-out;
+}
+
+.bounce {
+	transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}

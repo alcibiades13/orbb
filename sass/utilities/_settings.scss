@@ -1,0 +1,37 @@
+/*================================
+=            Settings            =
+================================*/
+
+
+/* Typograhy */
+
+$base-font-size: 16px;
+$font-1: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-2: Georgia, serif;
+$font-num: "Lekton", "Montserrat", "Helvetica Neue", sans-serif;
+
+$baseline: $base-font-size * 1.5;
+
+/* Colors */
+$color-link: #1a44df;
+$color-link-hover: #222;
+
+$color-text: #1f1f1f;
+$color-grey-text: #666;
+$color-light-grey: #DDD;
+$color-dark-orange: #F25E3D;
+$color-white: #f1f1f1;
+$color-light-bg: #EEE;
+$color-dark-grey: #333;
+
+$color-hr: #999;
+
+$color-success: #41a839;
+$color-error: #D63E3E;
+$color-info: #2E66C7;
+$color-dark: #222;
+
+/* Positioning */
+$margin-multiplier: 2;
+
+$general-margin: $baseline * $margin-multiplier;

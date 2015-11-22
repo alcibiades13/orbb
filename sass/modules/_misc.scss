@@ -1,0 +1,260 @@
+/*===================================
+=            Misc styles            =
+===================================*/
+
+
+/* Panel */
+
+.panel {
+	display: inline-block;
+	padding: 1rem 2rem;
+	background-color: $color-light-bg;
+	border: 1px solid $color-hr;
+	box-shadow: 0px 0px 3px $color-hr inset;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+/* Large text */
+
+.large-text {
+	font-size: 300%;
+	font-weight: bold;
+}
+
+/* Blockquote */
+
+.blockquote {
+	display: block;
+	font-style: italic;
+	color: $color-grey-text;
+
+	&:before {
+		content: "\"";
+		padding-right: .5rem;
+	}
+
+	&:after {
+		content: "\"";
+		padding-left: .5rem;
+	}
+}
+
+/* Pagination */
+
+.pagination {
+	list-style-type: none;
+	padding-left: 0;
+
+	li {
+		display: inline-block;
+		padding: 0;
+		line-height: normal;
+
+		a {
+			text-decoration: none;
+			display: block;
+			background-color: $color-white;
+			color: $color-text;
+			padding: 6px 12px;
+			border: 1px solid $color-text;
+
+			&:hover {
+				background-color: $color-light-bg;
+			}
+		}
+
+		&.active a {
+			background-color: $color-dark-orange;
+			color: $color-white;
+		}
+
+		&.disabled a {
+			background-color: $color-light-bg;
+			cursor: default;
+			pointer-events: none;
+		}
+	}
+}
+
+/* Breadcrumbs */
+
+.breadcrumbs {
+	list-style-type: none;
+	padding-left: 0;
+	background-color: $color-light-bg;
+	border: 1px solid $color-hr;
+	text-align: left;
+	padding: 10px;
+	border-radius: 3px;
+
+	li {
+		display: inline-block;
+		margin-left: $baseline;
+
+		a {
+			text-decoration: none;
+			color: $color-info;
+
+			&:hover {
+				color: $color-dark-orange;
+			}
+		}
+
+		&:after {
+			content: "\00BB";
+			margin-left: $baseline;
+		}
+
+		&:last-child {
+			color: $color-grey-text;
+
+			&:after {
+				content: "";
+			}
+		}
+	}
+}
+
+.breadcrumbs-dark {
+	@extend .breadcrumbs;
+
+	background-color: $color-dark-grey;
+	
+	li a {
+		color: $color-white;
+	}
+
+	li:after {
+		color: $color-white;
+	}
+
+	li:last-child {
+		color: $color-hr;
+	}
+}
+
+/* Accordion */
+
+.accordion {
+
+	position: relative;
+	margin-bottom: ($general-margin * 3);
+
+	ul {
+		list-style-type: none;
+		width: 100%;
+		display: block;
+		border: 1px solid $color-hr;
+
+		li {
+			display: inline-block;
+			float: left;
+			width: (100% / 3);
+			border-right: 1px solid $color-hr;
+			-webkit-box-sizing: border-box;
+			   -moz-box-sizing: border-box;
+			        box-sizing: border-box;
+
+			a {
+				text-decoration: none;
+				color: $color-white;
+				display: inline-block;
+				width: 100%;
+				line-height: 35px;
+				background-color: $color-dark-grey;
+				@extend .ease;
+			}
+
+			&:last-child {
+				border-right: 0;
+			}
+
+			&.active a {
+				background-color: $color-dark-orange;
+				color: $color-white;
+			}
+		}
+	}
+
+	.accordion-text {
+		@include clearfix;
+	}
+
+	p {
+		display: block;
+		position: absolute;
+		top: 35px;
+		left: 0;
+		margin: 0;
+		padding: $baseline;
+		width: 100%;
+		background-color: $color-white;
+
+		&:not(:first-child) {
+			display: none;
+		}
+	}
+}
+
+/* Progress Bar */
+
+.progress-bar, .progress-bar-anim {
+	width: 100%;
+	border: 1px solid $color-dark;
+	background-color: $color-light-bg;
+	height: 25px;
+	border-radius: 10px;
+	overflow: hidden;
+	margin-bottom: $general-margin;
+
+	.progress, .progress-anim {
+		width: 0;
+		height: 23px;
+		text-align: center;
+		background-color: $color-dark-orange;
+		color: $color-white;
+		font-family: $font-num;
+		font-weight: 700;
+	}
+}
+
+/* Tags */
+
+.tag-arrow {
+    display: inline-block;
+    position: relative;
+    padding: 2px 6px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    margin: 0 30px 1em 0;
+    text-decoration: none;
+    text-transform: lowercase;
+    background-color: $color-dark-orange;
+    color: $color-white;
+}
+ 
+.tag-arrow:hover {
+    background-color: $color-dark;
+    color: $color-white;
+}
+
+ 
+.tag-arrow:after {
+    display: inline-block;
+    border: 14px solid;
+    border-color: transparent transparent transparent $color-dark-orange;
+    height: 0;
+    width: 0;
+    position: absolute;
+    right: -28px;
+    top: 0;
+    content: "";
+    display: inline-block;
+}
+ 
+ 
+.tag-arrow:hover:after {
+    border-color: transparent transparent transparent $color-dark;
+}

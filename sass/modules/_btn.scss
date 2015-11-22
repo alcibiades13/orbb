@@ -1,0 +1,146 @@
+/*=====================================
+=            Button styles            =
+=====================================*/
+
+/* BUTTON BASE */
+.btn {
+	line-height: 1.5rem;
+	padding: 8px 16px;
+	border-radius: 5px;
+	border: 1px solid $color-hr;
+	color: $color-text;
+	text-decoration: none;
+	display: inline-block;
+	box-shadow: 0 -1px 3px $color-light-grey inset;
+}
+
+/* DEFAULT BUTTON */
+.btn-default {
+	@extend .btn;
+
+	background-color: $color-white;
+	color: $color-text;	
+
+	&:hover {
+		background-color: darken($color-white, 5%);
+	}
+}
+
+.btn-ok {
+	@extend .btn;
+
+	background-color: $color-success;
+	color: white;
+
+	&:hover {
+		background-color: darken($color-success, 5%);
+	}
+}
+
+.btn-info {
+	@extend .btn;
+
+	background-color: $color-info;
+	color: white;
+
+	&:hover {
+		background-color: darken($color-info, 5%);
+	}
+}
+
+.btn-err {
+	@extend .btn;
+
+	background-color: $color-error;
+	color: white;
+
+	&:hover {
+		background-color: darken($color-error, 5%);
+	}
+}
+
+.btn-black {
+	@extend .btn;
+
+	background-color: $color-dark;
+	color: white;
+	border: 1px solid $color-light-grey;
+
+	&:hover {
+		background-color: darken($color-dark, 5%);
+	}
+}
+
+/* SQUARED BUTTON */
+
+.btn-square {
+	@extend .btn;
+
+	border-radius: 0;
+}
+
+/* BUTTON SIZES */
+.btn-large {
+	@extend .btn;
+
+	padding: 12px 28px;
+}
+
+.btn-small {
+	@extend .btn;
+
+	padding: 2px 8px;
+}
+
+
+/* CALL TO ACTION */
+.cta {
+	@extend .btn;
+
+	font-size: $base-font-size * 1.5;
+	padding: 1rem 3rem;
+	background-color: $color-success;
+	color: white;
+
+	&:hover {
+		background-color: darken($color-success, 5%);
+	}
+}
+
+/* TRANPARENT BACKGROUND */
+
+.btn-tr {
+	@extend .btn;
+	background-color: transparent;
+	border: 1px solid $color-dark;
+	color: $color-dark;
+	box-shadow: none;
+}
+
+.btn-info-tr {
+	@extend .btn-tr;
+	background-color: transparent;
+	border: 1px solid $color-info;
+	color: $color-info;
+}
+
+.btn-err-tr {
+	@extend .btn-tr;
+	background-color: transparent;
+	border: 1px solid $color-error;
+	color: $color-error;
+}
+
+.btn-ok-tr {
+	@extend .btn-tr;
+	background-color: transparent;
+	border: 1px solid $color-success;
+	color: $color-success;
+}
+
+.btn-danger-tr {
+	@extend .btn-tr;
+	background-color: transparent;
+	border: 1px solid $color-dark-orange;
+	color: $color-dark-orange;
+}

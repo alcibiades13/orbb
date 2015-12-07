@@ -11,9 +11,7 @@
 	background-color: $color-light-bg;
 	border: 1px solid $color-hr;
 	box-shadow: 0px 0px 3px $color-hr inset;
-	-webkit-box-sizing: border-box;
-	   -moz-box-sizing: border-box;
-	        box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 /* Large text */
@@ -29,15 +27,64 @@
 	display: block;
 	font-style: italic;
 	color: $color-grey-text;
+	text-align: left;
+	padding-left: $baseline;
+	border-left: 3px solid $color-light-grey;
 
-	&:before {
-		content: "\"";
-		padding-right: .5rem;
+	// &:before {
+	// 	content: "\"";
+	// 	padding-right: .5rem;
+	// }
+
+	// &:after {
+	// 	content: "\"";
+	// 	padding-left: .5rem;
+	// }
+
+	p {
+		margin-bottom: 10px;
 	}
 
-	&:after {
-		content: "\"";
-		padding-left: .5rem;
+	cite {
+		// margin-top: 10px;
+		display: inline-block;
+		color: lighten($color-grey-text, 15%);
+		text-transform: uppercase;
+		font-size: .75em;
+
+		&:before {
+			content: "-";
+			padding-right: .5rem;
+		}
+	}
+}
+
+.blockquote-right {
+	@extend .blockquote;
+	border-left: 0;
+	border-right: 3px solid $color-pink;
+	padding-left: 0;
+	padding-right: $baseline;
+	text-align: right;
+}
+
+.blockquote-quote {
+	@extend .blockquote;
+	background-color: $color-light-bg;
+	padding: 10px 0 10px  $baseline;
+
+	&:before {
+		content: open-quote;
+		font-size: 3em;
+		display: inline-block;
+		line-height: 0.1em;
+		margin-right: 0.25em;
+		vertical-align: -0.4em;
+		color: $color-dark-orange;
+	}
+
+	p {
+		display: inline;
 	}
 }
 
@@ -59,14 +106,16 @@
 			color: $color-text;
 			padding: 6px 12px;
 			border: 1px solid $color-text;
+			transition: all 0.3s ease-in-out;
 
 			&:hover {
-				background-color: $color-light-bg;
+				background-color: $color-dark;
+				color: $color-light-grey;
 			}
 		}
 
 		&.active a {
-			background-color: $color-dark-orange;
+			background-color: $color-pink;
 			color: $color-white;
 		}
 
@@ -98,7 +147,7 @@
 			color: $color-info;
 
 			&:hover {
-				color: $color-dark-orange;
+				color: $color-pink;
 			}
 		}
 
@@ -153,9 +202,7 @@
 			float: left;
 			width: (100% / 3);
 			border-right: 1px solid $color-hr;
-			-webkit-box-sizing: border-box;
-			   -moz-box-sizing: border-box;
-			        box-sizing: border-box;
+			box-sizing: border-box;
 
 			a {
 				text-decoration: none;
@@ -172,7 +219,7 @@
 			}
 
 			&.active a {
-				background-color: $color-dark-orange;
+				background-color: $color-pink;
 				color: $color-white;
 			}
 		}
@@ -213,7 +260,7 @@
 		width: 0;
 		height: 23px;
 		text-align: center;
-		background-color: $color-dark-orange;
+		background-color: $color-pink;
 		color: $color-white;
 		font-family: $font-num;
 		font-weight: 700;
@@ -231,7 +278,7 @@
     margin: 0 30px 1em 0;
     text-decoration: none;
     text-transform: lowercase;
-    background-color: $color-dark-orange;
+    background-color: $color-pink;
     color: $color-white;
 }
  
@@ -244,7 +291,7 @@
 .tag-arrow:after {
     display: inline-block;
     border: 14px solid;
-    border-color: transparent transparent transparent $color-dark-orange;
+    border-color: transparent transparent transparent $color-pink;
     height: 0;
     width: 0;
     position: absolute;
@@ -257,4 +304,394 @@
  
 .tag-arrow:hover:after {
     border-color: transparent transparent transparent $color-dark;
+}
+
+.label {
+	background-color: $color-dark;
+	color: $color-white;
+	padding: 3px 6px;
+	border-radius: 6px;
+	margin: 1em 4px;
+	font-size: 13px;
+	text-transform: uppercase;
+	display: inline-block;
+	margin-bottom: 2px;
+	text-decoration: none;
+}
+
+.label-dark {
+	@extend .label;
+
+	background-color: $color-dark;
+}
+
+
+.label-info {
+	@extend .label;
+
+	background-color: $color-info;
+}
+
+.label-danger {
+	@extend .label;
+
+	background-color: $color-dark-orange;
+}
+
+.label-ok {
+	@extend .label;
+
+	background-color: $color-success;
+}
+
+.label-err {
+	@extend .label;
+
+	background-color: $color-error;
+}
+
+
+/* Tooltips */
+
+.trigger {
+	height: 50px;
+	padding: 0 30px;
+	border-radius: 25px;
+	background-color: $color-pink;
+	color: $color-white;
+	line-height: 50px;
+	text-decoration: none;
+	display: inline-block;
+	position: relative;
+
+	&:hover {
+
+		 .tooltip {
+			visibility: visible;
+			opacity: 1;
+			-webkit-transform: translate(10px, 0);
+			        transform: translate(10px, 0);
+		}
+	}
+}
+
+.tooltip {
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.3s ease-in-out;
+	background-color: $color-dark;
+	color: $color-light-grey;
+	display: inline-block;
+	padding: 0 2rem;
+	border-radius: 5px;
+	position: absolute;
+	left: calc(100% + 10px);
+	top: 0;
+	// width: 150px;
+	height: 100%;
+	white-space: nowrap;
+
+	&::before {
+		content: "";
+		display: inline-block;
+		border: 10px solid;
+		border-color: transparent;
+		border-right-color: $color-dark;
+		position: absolute;
+		left: -20px;
+		top: 15px;
+	}
+}
+
+.trigger-left {
+	@extend .trigger;
+
+	&:hover .tooltip {
+		-webkit-transform: translate(-10px, 0);
+		        transform: translate(-10px, 0);
+	}
+}
+
+.tooltip-left {
+	@extend .tooltip;
+
+	left: initial;
+	right: calc(100% + 10px);
+
+	&::after {
+		content: "";
+		display: inline-block;
+		border: 10px solid;
+		position: absolute;
+		border-color: transparent;
+		border-left-color: $color-dark;
+		right: -20px;
+		left: none;
+		top: 15px;
+	}
+
+	&::before {
+		content: none;
+	}
+}
+
+/* Pie charts */
+
+.pie {
+	height: 200px;
+	width: 200px;
+	border-radius: 50%;
+	background: linear-gradient(to right, 
+		transparent 50%, currentColor 0) $color-pink;
+	display: inline-block;
+	margin: $general-margin;
+	color: $color-yellow;
+
+	&::before {
+		content: "";
+		background-color: inherit;
+		display: inline-block;
+		height: 200px;
+		width: 100px;
+		margin-left: 50%;
+		border-radius: 0 100% 100% 0 / 50%;
+
+		/* change this value to get the angle (.3 = 30%, etc) */
+		-webkit-transform: rotate(.3turn);
+		        transform: rotate(.3turn);
+		-webkit-transform-origin: left;
+		        transform-origin: left;
+	}
+
+}
+
+.pie.over-50::before {
+	background: currentColor;
+}
+
+.pie-animated {
+	@extend .pie;
+
+	&::before {
+		background-color: currentColor;
+		-webkit-transform: rotate(0);
+		        transform: rotate(0);
+		-webkit-animation: piecolor 2s step-start infinite,
+			piespin 1s linear infinite;
+		        animation: piecolor 2s step-start infinite,
+			piespin 1s linear infinite;
+	}
+}
+
+@-webkit-keyframes piecolor {
+	50% {
+		background-color: inherit;
+	}
+}
+
+@keyframes piecolor {
+	50% {
+		background-color: inherit;
+	}
+}
+
+@-webkit-keyframes piespin {
+	to {
+		-webkit-transform: rotate(.5turn);
+		        transform: rotate(.5turn);
+	}
+}
+
+@keyframes piespin {
+	to {
+		-webkit-transform: rotate(.5turn);
+		        transform: rotate(.5turn);
+	}
+}
+
+
+/* Hero Unit */
+
+.hero {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	width: 80%;
+	-ms-align-items: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	background-color: $color-light-bg;
+	border: 1px solid $color-light-grey;
+	margin: $general-margin auto;
+	padding: $general-margin;
+	min-height: 350px;
+
+	h1 {
+		margin: 0;
+		font-size: 3em;
+	}
+
+}
+
+.hero-full {
+	@extend .hero;
+
+	width: 100%;
+}
+
+.hero-left {
+	@extend .hero;
+
+	-webkit-align-items: flex-start;
+
+	    -ms-flex-align: start;
+
+	        align-items: flex-start;
+}
+
+.hero-right {
+	@extend .hero;
+
+	-webkit-align-items: flex-end;
+
+	    -ms-flex-align: end;
+
+	        align-items: flex-end;
+}
+
+.hero-bottom {
+	-webkit-justify-content: flex-end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
+}
+
+
+/* Tables */
+
+.table {
+	
+	tbody tr {
+		padding: 10px 0;
+		border-top: 1px solid $color-hr;
+	}
+
+	td, th {
+		padding: 5px 25px;
+	}
+}
+
+.table-stripes {
+
+	tbody tr {
+
+		&:nth-child(odd) {
+			background-color: $color-white;
+		}
+
+	}
+}
+
+.table-border {
+	border: 1px solid $color-hr;
+
+	td, th {
+		border-left: 1px solid $color-hr;
+	}
+}
+
+.table-hover {
+	
+	tbody tr:hover {
+		background-color: $color-white;
+	}
+
+}
+
+.table-dark {
+
+	thead {
+		background-color: $color-dark;
+		color: $color-white;
+	}
+}
+
+
+/* Rollovers */
+
+.card-wrapper {
+	-webkit-perspective: 900px;
+	        perspective: 900px;
+	position: relative;
+	height: 300px;
+	width: 300px;
+
+	.card {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		transition: all 0.5s $easeOutBounce;
+		-webkit-transform-style: preserve-3d;
+		        transform-style: preserve-3d;
+
+		&:hover {
+			-webkit-transform: rotateY(180deg);
+			        transform: rotateY(180deg);
+		}
+	}
+
+	.card-front, .card-back {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		-webkit-backface-visibility: hidden;
+		        backface-visibility: hidden;
+		background-size: 100% 100%;
+		border: 10px solid $color-dark;
+	}
+
+	.card-front {
+		background-image: url(../images/helpers/dog-drink.jpg);	
+	}
+
+	.card-back {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: $color-dark-orange;
+		color: $color-white;
+		-webkit-transform: rotateY(180deg);
+		        transform: rotateY(180deg);
+
+		p {
+			background-color: $color-dark;
+			color: $color-white;
+			padding: 30px 10px;
+			position: absolute;
+			width: 100%;
+			margin: 0;
+			top: calc(50% - 40px);
+		}
+	}
+
+}
+
+.card-wrapper-round {
+	@extend .card-wrapper;
+	border-radius: 50%;
+	overflow: hidden;
+
+	.card, .card-front, .card-back {
+		border-radius: 50%;
+	}
+
+	.card-front {
+		background-image: url(../images/helpers/cat-drink.jpg);	
+	}
 }

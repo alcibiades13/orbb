@@ -42,6 +42,27 @@
     margin: 1rem;
 }
 
+.col-lg-5 {
+	display: inline-block;
+	width: calc(100% / 12 * 5 - 2rem);
+    float: left;
+    margin: 1rem;
+}
+
+.col-lg-6 {
+	display: inline-block;
+	width: calc(100% / 2 - 2rem);
+    float: left;
+    margin: 1rem;
+}
+
+.col-lg-7 {
+	display: inline-block;
+	width: calc(100% / 12 * 7 - 2rem);
+    float: left;
+    margin: 1rem;
+}
+
 .col-lg-8 {
 	display: inline-block;
 	width: calc(100% / 12 * 8 - 2rem);
@@ -52,6 +73,27 @@
 .col-lg-9 {
 	display: inline-block;
 	width: calc(100% / 12 * 9 - 2rem);
+    float: left;
+    margin: 1rem;
+}
+
+.col-lg-10 {
+	display: inline-block;
+	width: calc(100% / 12 * 10 - 2rem);
+    float: left;
+    margin: 1rem;
+}
+
+.col-lg-11 {
+	display: inline-block;
+	width: calc(100% / 12 * 11 - 2rem);
+    float: left;
+    margin: 1rem;
+}
+
+.col-lg-12 {
+	display: inline-block;
+	width: calc(100% - 2rem);
     float: left;
     margin: 1rem;
 }

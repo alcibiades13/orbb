@@ -12,7 +12,6 @@ $(document).ready(function () {
 		progressBar();
 		prettyPrint();
 		copyMarkup();
-
 	}
 
 
@@ -52,7 +51,6 @@ $(document).ready(function () {
 
 	// animate progress
 	$('.anim-progress').on('click', animProgress);
-
 
 
 	// theme functions

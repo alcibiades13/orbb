@@ -6,8 +6,8 @@
 /* Typograhy */
 
 $base-font-size: 16px;
-$font-1: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-2: Georgia, serif;
+$font-1: "Varela", "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-2: "Montserrat", "Varela", Georgia, serif;
 $font-num: "Lekton", "Montserrat", "Helvetica Neue", sans-serif;
 
 $baseline: $base-font-size * 1.5;
@@ -23,6 +23,8 @@ $color-dark-orange: #F25E3D;
 $color-white: #f1f1f1;
 $color-light-bg: #EEE;
 $color-dark-grey: #333;
+$color-pink: #ef685e;
+$color-yellow: #e6e035;
 
 $color-hr: #999;
 
@@ -35,3 +37,6 @@ $color-dark: #222;
 $margin-multiplier: 2;
 
 $general-margin: $baseline * $margin-multiplier;
+
+/* Transitions */
+$easeOutBounce: cubic-bezier(0.175, 0.885, 0.320, 1.275);

@@ -15,19 +15,19 @@ to more complex elements such as
 
 Example markup for the breadcrumbs feature
 ```
-					<!-- light -->
-					<ul class="breadcrumbs">
-						<li><a href="#">Home</a></li>
-						<li><a href="#">About</a></li>
-						<li class="active">Product</li>
-					</ul>
+<!-- light -->
+<ul class="breadcrumbs">
+	<li><a href="#">Home</a></li>
+	<li><a href="#">About</a></li>
+	<li class="active">Product</li>
+</ul>
 
-					<!-- dark -->
-					<ul class="breadcrumbs-dark">
-						<li><a href="#">Home</a></li>
-						<li><a href="#">About</a></li>
-						<li class="active">Product</li>
-					</ul>
+<!-- dark -->
+<ul class="breadcrumbs-dark">
+	<li><a href="#">Home</a></li>
+	<li><a href="#">About</a></li>
+	<li class="active">Product</li>
+</ul>
 ```				
 
 

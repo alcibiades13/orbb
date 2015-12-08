@@ -15,7 +15,7 @@ to more complex elements such as
 
 Example markup for the breadcrumbs feature
 
-``` 
+```html 
 <!-- light -->
 <ul class="breadcrumbs">
 	<li><a href="#">Home</a></li>

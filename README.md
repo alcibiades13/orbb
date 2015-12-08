@@ -1,5 +1,5 @@
 # orbb
-** CSS and JS Framework
+## CSS and JS Framework
 
 Responsive and easy to use and customize front-end framework with tons of useful features and components from basic ones like 
 * buttons

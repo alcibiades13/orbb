@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*==============================
 =            Styles            =
 ==============================*/
@@ -1737,6 +1738,92 @@ hr {
   background-image: url(../images/helpers/cat-drink.jpg);
 }
 
+/* Slider */
+/* line 702, ../sass/modules/_misc.scss */
+.slider {
+  width: 100%;
+  position: relative;
+}
+
+/* line 708, ../sass/modules/_misc.scss */
+.slider-inner {
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  position: relative;
+}
+/* line 714, ../sass/modules/_misc.scss */
+.slider-inner .slide {
+  height: 100%;
+  width: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.7s ease-out;
+}
+/* line 725, ../sass/modules/_misc.scss */
+.slider-inner .slide img {
+  width: 100%;
+  height: auto;
+  display: inline-block;
+}
+/* line 731, ../sass/modules/_misc.scss */
+.slider-inner .slide.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* line 739, ../sass/modules/_misc.scss */
+.slider-prev, .slider-next {
+  position: absolute;
+  top: 50%;
+  height: 50px;
+  width: 50px;
+  margin-top: -25px;
+  display: inline-block;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  z-index: 21;
+  opacity: 0.3;
+  transition: opacity 0.2s ease-in;
+}
+/* line 752, ../sass/modules/_misc.scss */
+.slider-prev:hover, .slider-next:hover {
+  opacity: 0.5;
+}
+
+/* line 757, ../sass/modules/_misc.scss */
+.slider-prev {
+  left: 3%;
+  background-image: url(../images/helpers/slide-prev.svg);
+}
+
+/* line 762, ../sass/modules/_misc.scss */
+.slider-next {
+  right: 3%;
+  background-image: url(../images/helpers/slide-next.svg);
+}
+
+/* line 767, ../sass/modules/_misc.scss */
+.slider-caption {
+  position: absolute;
+  z-index: 20;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #f1f1f1;
+  padding: 2em 1em;
+  text-align: center;
+}
+/* line 779, ../sass/modules/_misc.scss */
+.slider-caption p {
+  margin: 0;
+}
+
 /* Themes */
 /*====================================
 =            Theme styles            =
@@ -1892,29 +1979,39 @@ h3 {
 .sidebar nav ul li.active a {
   color: #F25E3D;
   font-weight: bold;
-  border-left: 1px solid #222;
 }
-/* line 163, ../sass/theme/_theme.scss */
+/* line 162, ../sass/theme/_theme.scss */
+.sidebar nav ul li.active a::before {
+  content: "❬";
+  position: absolute;
+  left: 5px;
+}
+/* line 169, ../sass/theme/_theme.scss */
 .sidebar nav ul li:hover a {
   color: #626262;
-  border-left: 1px solid #222;
 }
-/* line 168, ../sass/theme/_theme.scss */
+/* line 172, ../sass/theme/_theme.scss */
+.sidebar nav ul li:hover a::before {
+  content: "❬";
+  position: absolute;
+  left: 5px;
+}
+/* line 179, ../sass/theme/_theme.scss */
 .sidebar nav ul li.active:hover a {
   color: #F25E3D;
 }
 
-/* line 176, ../sass/theme/_theme.scss */
+/* line 187, ../sass/theme/_theme.scss */
 ul.tag-wrapper {
   list-style-type: none;
   padding-left: 0;
 }
-/* line 180, ../sass/theme/_theme.scss */
+/* line 191, ../sass/theme/_theme.scss */
 ul.tag-wrapper li {
   display: inline-block;
 }
 
-/* line 185, ../sass/theme/_theme.scss */
+/* line 196, ../sass/theme/_theme.scss */
 .preview {
   width: 100%;
   background-color: #f1f1f1;
@@ -1924,12 +2021,12 @@ ul.tag-wrapper li {
   text-align: left !important;
 }
 
-/* line 194, ../sass/theme/_theme.scss */
+/* line 205, ../sass/theme/_theme.scss */
 .preview-nav {
   display: block;
   height: 30px;
 }
-/* line 199, ../sass/theme/_theme.scss */
+/* line 210, ../sass/theme/_theme.scss */
 .preview-nav h3 {
   margin: 0;
   padding-left: 10px;
@@ -1937,19 +2034,19 @@ ul.tag-wrapper li {
   line-height: 30px;
   font-weight: 400;
 }
-/* line 207, ../sass/theme/_theme.scss */
+/* line 218, ../sass/theme/_theme.scss */
 .preview-nav span {
   padding-right: 10px;
   display: inline-block;
 }
-/* line 211, ../sass/theme/_theme.scss */
+/* line 222, ../sass/theme/_theme.scss */
 .preview-nav span a {
   text-decoration: none;
   color: #2E66C7;
   line-height: 30px;
 }
 
-/* line 219, ../sass/theme/_theme.scss */
+/* line 230, ../sass/theme/_theme.scss */
 pre.prettyprint {
   border: 0 !important;
   font-size: 14px;
@@ -1959,7 +2056,7 @@ pre.prettyprint {
   padding-top: 2rem;
 }
 
-/* line 228, ../sass/theme/_theme.scss */
+/* line 239, ../sass/theme/_theme.scss */
 pre {
   white-space: pre-wrap;
   /* CSS 3 */
@@ -1978,7 +2075,7 @@ pre {
   tab-size: 4;
 }
 
-/* line 245, ../sass/theme/_theme.scss */
+/* line 256, ../sass/theme/_theme.scss */
 #features .column {
   display: flex;
   flex-direction: column;
@@ -1986,15 +2083,15 @@ pre {
   align-items: center;
   justify-content: center;
 }
-/* line 252, ../sass/theme/_theme.scss */
+/* line 263, ../sass/theme/_theme.scss */
 #features .column img {
   width: 100%;
 }
-/* line 257, ../sass/theme/_theme.scss */
+/* line 268, ../sass/theme/_theme.scss */
 #features .col-lg-4 {
   padding: 0 48px;
 }
-/* line 261, ../sass/theme/_theme.scss */
+/* line 272, ../sass/theme/_theme.scss */
 #features h3 {
   text-transform: uppercase;
   color: #666;
@@ -2002,22 +2099,22 @@ pre {
   margin: 1rem 0;
 }
 
-/* line 277, ../sass/theme/_theme.scss */
+/* line 288, ../sass/theme/_theme.scss */
 .feature-img {
   text-align: center;
   padding: 0 3rem;
 }
-/* line 281, ../sass/theme/_theme.scss */
+/* line 292, ../sass/theme/_theme.scss */
 .feature-img i {
   font-size: 8rem;
 }
 
-/* line 286, ../sass/theme/_theme.scss */
+/* line 297, ../sass/theme/_theme.scss */
 .l-main h2 {
   display: inline-block;
   color: #666;
 }
-/* line 290, ../sass/theme/_theme.scss */
+/* line 301, ../sass/theme/_theme.scss */
 .l-main h2:after {
   content: "";
   display: block;
@@ -2028,7 +2125,7 @@ pre {
   left: 25%;
 }
 
-/* line 301, ../sass/theme/_theme.scss */
+/* line 312, ../sass/theme/_theme.scss */
 .description {
   text-align: left;
   background-color: #f1f1f1;
@@ -2038,7 +2135,7 @@ pre {
   margin: 24px 0;
 }
 
-/* line 310, ../sass/theme/_theme.scss */
+/* line 321, ../sass/theme/_theme.scss */
 .coded {
   font-family: "Courier New", Verdana;
   color: #F25E3D;

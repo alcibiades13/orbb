@@ -14,8 +14,8 @@ to more complex elements such as
 * pie charts
 
 Example markup for the breadcrumbs feature
-```
-<!-- light -->
+
+``` <!-- light -->
 <ul class="breadcrumbs">
 	<li><a href="#">Home</a></li>
 	<li><a href="#">About</a></li>
@@ -27,8 +27,7 @@ Example markup for the breadcrumbs feature
 	<li><a href="#">Home</a></li>
 	<li><a href="#">About</a></li>
 	<li class="active">Product</li>
-</ul>
-```				
+</ul> ```				
 
 
 Documentation for the framework will be available on the orbb website (**link coming up soon**). All you'll have to do is add couple of *classes* to your (or suggested) markup and your web app is ready to go.

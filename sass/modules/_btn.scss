@@ -170,3 +170,173 @@
 		color: $color-white;
 	}
 }
+
+
+
+/* Tags */
+
+.tag-arrow {
+    display: inline-block;
+    position: relative;
+    padding: 2px 6px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    margin: 0 30px 1em 0;
+    text-decoration: none;
+    text-transform: lowercase;
+    background-color: $color-pink;
+    color: $color-white;
+}
+ 
+.tag-arrow:hover {
+    background-color: $color-dark;
+    color: $color-white;
+}
+
+ 
+.tag-arrow:after {
+    display: inline-block;
+    border: 14px solid;
+    border-color: transparent transparent transparent $color-pink;
+    height: 0;
+    width: 0;
+    position: absolute;
+    right: -28px;
+    top: 0;
+    content: "";
+    display: inline-block;
+}
+ 
+ 
+.tag-arrow:hover:after {
+    border-color: transparent transparent transparent $color-dark;
+}
+
+.label {
+	background-color: $color-dark;
+	color: $color-white;
+	padding: 3px 6px;
+	border-radius: 6px;
+	margin: 1em 4px;
+	font-size: 13px;
+	text-transform: uppercase;
+	display: inline-block;
+	margin-bottom: 2px;
+	text-decoration: none;
+}
+
+.label-dark {
+	@extend .label;
+
+	background-color: $color-dark;
+}
+
+
+.label-info {
+	@extend .label;
+
+	background-color: $color-info;
+}
+
+.label-danger {
+	@extend .label;
+
+	background-color: $color-dark-orange;
+}
+
+.label-ok {
+	@extend .label;
+
+	background-color: $color-success;
+}
+
+.label-err {
+	@extend .label;
+
+	background-color: $color-error;
+}
+
+
+/* Tooltips */
+
+.trigger {
+	height: 50px;
+	padding: 0 30px;
+	border-radius: 25px;
+	background-color: $color-pink;
+	color: $color-white;
+	line-height: 50px;
+	text-decoration: none;
+	display: inline-block;
+	position: relative;
+
+	&:hover {
+
+		 .tooltip {
+			visibility: visible;
+			opacity: 1;
+			-webkit-transform: translate(10px, 0);
+			        transform: translate(10px, 0);
+		}
+	}
+}
+
+.tooltip {
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.3s ease-in-out;
+	background-color: $color-dark;
+	color: $color-light-grey;
+	display: inline-block;
+	padding: 0 2rem;
+	border-radius: 5px;
+	position: absolute;
+	left: calc(100% + 10px);
+	top: 0;
+	// width: 150px;
+	height: 100%;
+	white-space: nowrap;
+
+	&::before {
+		content: "";
+		display: inline-block;
+		border: 10px solid;
+		border-color: transparent;
+		border-right-color: $color-dark;
+		position: absolute;
+		left: -20px;
+		top: 15px;
+	}
+}
+
+.trigger-left {
+	@extend .trigger;
+
+	&:hover .tooltip {
+		-webkit-transform: translate(-10px, 0);
+		        transform: translate(-10px, 0);
+	}
+}
+
+.tooltip-left {
+	@extend .tooltip;
+
+	left: initial;
+	right: calc(100% + 10px);
+
+	&::after {
+		content: "";
+		display: inline-block;
+		border: 10px solid;
+		position: absolute;
+		border-color: transparent;
+		border-left-color: $color-dark;
+		right: -20px;
+		left: none;
+		top: 15px;
+	}
+
+	&::before {
+		content: none;
+	}
+}

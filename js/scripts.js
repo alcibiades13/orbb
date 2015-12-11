@@ -14,6 +14,8 @@ $(document).ready(function () {
 		copyMarkup();
 		slider();
 		expandSlider();
+		showModal();
+		changeCodeTheme();
 	}
 
 
@@ -159,9 +161,24 @@ $(document).ready(function () {
 			}
 		}
 
+	} // slider
 
 
+	// Modal window
+	function showModal() {
+		$('.modal-show').on('click', function () {
+			$("body").addClass('modal-open');
+		});
+
+		$('.modal-hide').on('click', function () {
+			$("body").removeClass('modal-open');
+		});
+		$(".modal-outside").on('click', function () {
+			$("body").removeClass('modal-open');
+		});
 	}
+
+
 
 	function expandSlider() {
 
@@ -186,6 +203,27 @@ $(document).ready(function () {
 				'text/plain': markup
 			});
 			console.log(markup);
+		});
+	}
+
+	// change code theme
+	function changeCodeTheme() {
+		$('.theme-light').on('click', function (e){
+			e.preventDefault();
+   			$('link[href="css/tomorrow-night.css"]').attr('href','css/github.css');
+   			$('.change-theme-circle').animate({
+   				'right': '54px',
+   				'opacity': '1'
+   			}, 400);
+		});
+
+		$('.theme-dark').click(function (e){
+			e.preventDefault();
+		   $('link[href="css/github.css"]').attr('href','css/tomorrow-night.css');
+   			$('.change-theme-circle').animate({
+   				'right': '4px',
+   				'opacity': '0.3'
+   			}, 400);
 		});
 	}
 

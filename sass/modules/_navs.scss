@@ -4,29 +4,95 @@
 
 .nav {
 
-	ul {
-		list-style-type: none;
-		padding-left: 0;
+    list-style-type: none;
+    background-color: $color-light-bg;
+    height: 50px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    -ms-align-items: flex-start;
+    align-items: flex-start;
 
-		li {
+    li {
+      display: inline-block;
+
+		a {
+			padding: 0;
+			line-height: 49px;
+			margin: 0 15px;
+			color: $color-dark;
+			font-size: 1em;
+			font-weight: 500;
+			text-decoration: none;
+			// height: 100%;
 			display: inline-block;
+    		-webkit-box-sizing: border-box;
+			   -moz-box-sizing: border-box;
+		    	    box-sizing: border-box;	
+		   	transition: all 0.2s ease-in-out;
+		}
 
-			a {
-				text-decoration: none;
-				color: $color-dark;
-				text-shadow: 1px 1px 1px $color-white;
-				padding: 10px 20px;
-				font-size: 1rem;
+	    &.active a, &:hover a {
+	      color: $color-pink;
+	    }
+    }
+}
 
-				&:hover {
-					color: black;
-				}
-			}
+.nav-underline {
+	li {
 
-			&.active a {
-				color: $color-dark-orange;
-				text-shadow: 1px 1px 1px $color-dark;
-			}
+		&.active a, &:hover a {
+			border-bottom: 1px solid $color-dark;
+			color: currentColor;
 		}
 	}
+}
+
+.nav-bordertop {
+	li {
+
+		&.active a, &:hover a {
+			border-top: 1px solid $color-dark;
+			color: currentColor;
+		}
+	}
+}
+
+.nav-pills {
+	li {
+
+		a {
+			background-color: $color-info;
+			border-radius: 5px;
+			color: $color-white;
+			line-height: 50px;
+			padding: 0 10px
+		}
+
+		&.active a, &:hover a {
+			color: $color-info;
+			background-color: white;
+		}
+	}
+}
+
+.nav-right {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.nav-left {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: flex-start;
 }

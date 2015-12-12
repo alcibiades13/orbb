@@ -8,7 +8,8 @@
 $base-font-size: 16px;
 $font-1: "Varela", "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-2: "Montserrat", "Varela", Georgia, serif;
-$font-num: "Lekton", "Montserrat", "Helvetica Neue", sans-serif;
+$font-3: "Open sans", "Varela", Verdana, sans-serif;
+$font-num: "Lekton", "Hind", "Montserrat", "Helvetica Neue", sans-serif;
 
 $baseline: $base-font-size * 1.5;
 
@@ -25,6 +26,7 @@ $color-light-bg: #EEE;
 $color-dark-grey: #333;
 $color-pink: #ef685e;
 $color-yellow: #e6e035;
+$color-dark-red: #792c40;
 
 $color-hr: #999;
 
@@ -40,3 +42,4 @@ $general-margin: $baseline * $margin-multiplier;
 
 /* Transitions */
 $easeOutBounce: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+$bounce: cubic-bezier(0.215, 0.610, 0.355, 1.000);

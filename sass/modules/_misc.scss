@@ -651,3 +651,80 @@ body.modal-open #main-container {
     pointer-events: none;
 }
 
+
+/* Pricing tables */
+
+.activities {
+  margin-bottom: 1em;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+
+  justify-content: center;
+}
+
+.activity {
+  background-color: $color-light-bg;
+  margin-left: 1em;
+  margin-right: 1em;
+  padding: 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;  
+  position: relative;
+  padding-bottom: 40px;
+  min-width: 200px;
+  margin-bottom: $baseline;
+}
+
+.activity-title {
+  background-image: -webkit-linear-gradient(to bottom, $color-dark, $color-dark-grey);
+  background-image:    -moz-linear-gradient(to bottom, $color-dark, $color-dark-grey);
+  background-image:     -ms-linear-gradient(to bottom, $color-dark, $color-dark-grey);
+  background-image:      -o-linear-gradient(to bottom, $color-dark, $color-dark-grey);
+  background-image:         linear-gradient(to bottom, $color-dark, $color-dark-grey);
+  margin: 0;
+  padding: 7px;
+  display: block;
+  color: $color-white;
+  text-align: center;
+}
+
+.activity-price {
+  font-size: 2.25rem;
+  border-bottom: 1px solid #0b162a;
+  line-height: 2.5rem;
+  font-family: "Hind";
+  font-weight: bold;
+  color: $color-dark;
+}
+
+.activity-p {
+  padding-top: 1em;
+}
+
+.activity-desc {
+  padding: 1em 0;
+}
+
+.cta-program {
+  background-color: $color-dark-red;
+  padding: 5px;
+  border-top: 1px solid #000;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: $color-white;
+  display: block;
+  text-decoration: none;
+
+  &:hover {
+  	background-color: darken($color-dark-red, 5%);
+  }
+}

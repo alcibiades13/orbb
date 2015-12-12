@@ -2,7 +2,7 @@
 =            Base styles            =
 ===================================*/
 
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700|Montserrat:400,700|Varela|Varela+Round|Lekton:400,700,400italic);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700|Montserrat:400,700|Varela|Varela+Round|Lekton:400,700,400italic|Hind:400,600);
 
 body {
 	font-family: $font-1;
@@ -13,7 +13,7 @@ body {
 	        box-sizing: border-box;
 }
 
-p, ul, li, div {
+p, ul, li, div, a, nav {
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
 	        box-sizing: border-box;	

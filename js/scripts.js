@@ -16,6 +16,7 @@ $(document).ready(function () {
 		expandSlider();
 		showModal();
 		changeCodeTheme();
+		equalPriceWidth();
 	}
 
 
@@ -179,7 +180,7 @@ $(document).ready(function () {
 	}
 
 
-
+	// expand slider
 	function expandSlider() {
 
 		// get image height to expand the slider height
@@ -188,6 +189,13 @@ $(document).ready(function () {
 			'min-height': imgHeight
 		}).find('.slide').css('min-height', imgHeight);
 
+	}
+
+	function equalPriceWidth() {
+		var $pricingTableSingle = $('.activity');
+		var numOfPrices = $pricingTableSingle.length;
+		priceWdith = (100 / numOfPrices) - 1;
+		$pricingTableSingle.css('width', priceWdith + '%')
 	}
 
 
@@ -210,7 +218,7 @@ $(document).ready(function () {
 	function changeCodeTheme() {
 		$('.theme-light').on('click', function (e){
 			e.preventDefault();
-   			$('link[href="css/tomorrow-night.css"]').attr('href','css/github.css');
+   			$('link[href="css/themes/tomorrow-night.css"]').attr('href','css/themes/custom.css');
    			$('.change-theme-circle').animate({
    				'right': '54px',
    				'opacity': '1'
@@ -219,7 +227,7 @@ $(document).ready(function () {
 
 		$('.theme-dark').click(function (e){
 			e.preventDefault();
-		   $('link[href="css/github.css"]').attr('href','css/tomorrow-night.css');
+		   $('link[href="css/themes/custom.css"]').attr('href','css/themes/tomorrow-night.css');
    			$('.change-theme-circle').animate({
    				'right': '4px',
    				'opacity': '0.3'

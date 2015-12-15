@@ -10,12 +10,9 @@ $(document).ready(function () {
 
 		accordion();
 		progressBar();
-		prettyPrint();
-		copyMarkup();
 		slider();
 		expandSlider();
 		showModal();
-		changeCodeTheme();
 		equalPriceWidth();
 	}
 
@@ -142,24 +139,19 @@ $(document).ready(function () {
 		* clear interval on mouseenter
 		* reset on mouseleave
 		*/
-		if($('.slider-next').parent().hasClass('slider-play')) {
+		sliderInt = setInterval( sliderInterval, 5000);
 
-			var sliderInt;
+		$('.slider-play').on({
+		    mouseenter: function() {
+		        clearInterval( sliderInt );
+		    },
+		    mouseleave: function() {
+		        sliderInt = setInterval( sliderInterval, 5000 );
+		    }
+		});
 
-			sliderInt = setInterval( sliderInterval, 5000);
-
-			$('.slider-play').on({
-			    mouseenter: function() {
-			        clearInterval( sliderInt );
-			    },
-			    mouseleave: function() {
-			        sliderInt = setInterval( sliderInterval, 5000 );
-			    }
-			});
-
-			function sliderInterval(){
-				$('.slider-play .slider-next').trigger('click');
-			}
+		function sliderInterval(){
+			$('.slider-play .slider-next').trigger('click');
 		}
 
 	} // slider
@@ -196,43 +188,6 @@ $(document).ready(function () {
 		var numOfPrices = $pricingTableSingle.length;
 		priceWdith = (100 / numOfPrices) - 1;
 		$pricingTableSingle.css('width', priceWdith + '%')
-	}
-
-
-
-	// theme functions
-
-	// copy markup
-	function copyMarkup() {
-		$('.copy').on('click', function(e) {
-			e.preventDefault();
-			var markup = $(this).parent().parent().parent().parent().find('.demo').html();
-			clipboard.copy({
-				'text/plain': markup
-			});
-			console.log(markup);
-		});
-	}
-
-	// change code theme
-	function changeCodeTheme() {
-		$('.theme-light').on('click', function (e){
-			e.preventDefault();
-   			$('link[href="css/themes/tomorrow-night.css"]').attr('href','css/themes/custom.css');
-   			$('.change-theme-circle').animate({
-   				'right': '54px',
-   				'opacity': '1'
-   			}, 400);
-		});
-
-		$('.theme-dark').click(function (e){
-			e.preventDefault();
-		   $('link[href="css/themes/custom.css"]').attr('href','css/themes/tomorrow-night.css');
-   			$('.change-theme-circle').animate({
-   				'right': '4px',
-   				'opacity': '0.3'
-   			}, 400);
-		});
 	}
 
 

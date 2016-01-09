@@ -170,7 +170,7 @@
 	@extend .breadcrumbs;
 
 	background-color: $color-dark-grey;
-	
+
 	li a {
 		color: $color-white;
 	}
@@ -203,6 +203,7 @@
 			width: (100% / 3);
 			border-right: 1px solid $color-hr;
 			box-sizing: border-box;
+			text-align: center;
 
 			a {
 				text-decoration: none;
@@ -274,7 +275,7 @@
 	height: 200px;
 	width: 200px;
 	border-radius: 50%;
-	background: linear-gradient(to right, 
+	background: linear-gradient(to right,
 		transparent 50%, currentColor 0) $color-pink;
 	display: inline-block;
 	margin: $general-margin;
@@ -440,7 +441,7 @@
 	}
 
 	.card-front {
-		background-image: url(../images/helpers/dog-drink.jpg);	
+		background-image: url(../images/helpers/dog-drink.jpg);
 	}
 
 	.card-back {
@@ -475,7 +476,7 @@
 	}
 
 	.card-front {
-		background-image: url(../images/helpers/cat-drink.jpg);	
+		background-image: url(../images/helpers/cat-drink.jpg);
 	}
 }
 
@@ -489,6 +490,7 @@
 
 .slider-inner {
 	width: 100%;
+	min-height: 610px;
 	height: 100%;
 	text-align: left;
 	position: relative;
@@ -502,7 +504,7 @@
 		visibility: hidden;
 		opacity: 0;
 		transition: all 0.7s ease-out;
-		
+
 		img {
 			width: 100%;
 			min-width: 100%;
@@ -628,7 +630,7 @@ body.modal-open .modal {
 	    100% {
 	        transform: translateY(0);
 	    }
-    }   
+    }
 }
 
 body.modal-open .modal-outside {
@@ -669,20 +671,21 @@ body.modal-open #main-container {
   justify-content: center;
 }
 
-.activity {
+.price-table {
   background-color: $color-light-bg;
   margin-left: 1em;
   margin-right: 1em;
   padding: 0;
   border-top-left-radius: 5px;
-  border-top-right-radius: 5px;  
+  border-top-right-radius: 5px;
   position: relative;
   padding-bottom: 40px;
   min-width: 200px;
   margin-bottom: $baseline;
+  text-align: center;
 }
 
-.activity-title {
+.price-table-title {
   background-image: -webkit-linear-gradient(to bottom, $color-dark, $color-dark-grey);
   background-image:    -moz-linear-gradient(to bottom, $color-dark, $color-dark-grey);
   background-image:     -ms-linear-gradient(to bottom, $color-dark, $color-dark-grey);
@@ -695,7 +698,7 @@ body.modal-open #main-container {
   text-align: center;
 }
 
-.activity-price {
+.price-table-price {
   font-size: 2.25rem;
   border-bottom: 1px solid #0b162a;
   line-height: 2.5rem;
@@ -704,11 +707,11 @@ body.modal-open #main-container {
   color: $color-dark;
 }
 
-.activity-p {
+.price-table-p {
   padding-top: 1em;
 }
 
-.activity-desc {
+.price-table-desc {
   padding: 1em 0;
 }
 

@@ -6,7 +6,7 @@
 
 body {
 	font-family: $font-1;
-	text-align: center;
+	// text-align: center;
 	-webkit-font-smoothing: antialiased;
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
@@ -16,7 +16,7 @@ body {
 p, ul, li, div, a, nav {
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
-	        box-sizing: border-box;	
+	        box-sizing: border-box;
 }
 
 button {

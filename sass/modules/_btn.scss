@@ -5,13 +5,14 @@
 /* BUTTON BASE */
 .btn {
 	line-height: 1.5rem;
-	padding: 8px 16px;
-	border-radius: 5px;
-	border: 1px solid $color-hr;
+	padding: 6px 16px;
+	// border-radius: 0;
+	border: none;
 	color: $color-text;
 	text-decoration: none;
 	display: inline-block;
-	box-shadow: 0 -1px 3px $color-light-grey inset;
+	// box-shadow: 0 -1px 3px $color-light-grey inset;
+	transition: all 0.25s ease-in-out;
 }
 
 /* DEFAULT BUTTON */
@@ -19,7 +20,7 @@
 	@extend .btn;
 
 	background-color: $color-white;
-	color: $color-text;	
+	color: $color-text;
 
 	&:hover {
 		background-color: darken($color-white, 5%);
@@ -59,6 +60,17 @@
 	}
 }
 
+.btn-danger {
+	@extend .btn;
+
+	background-color: $color-danger;
+	color: white;
+
+	&:hover {
+		background-color: darken($color-danger, 5%);
+	}
+}
+
 .btn-black {
 	@extend .btn;
 
@@ -71,13 +83,6 @@
 	}
 }
 
-/* SQUARED BUTTON */
-
-.btn-square {
-	@extend .btn;
-
-	border-radius: 0;
-}
 
 /* BUTTON SIZES */
 .btn-large {
@@ -128,7 +133,7 @@
 	background-color: transparent;
 	border: 1px solid $color-info;
 	color: $color-info;
-	
+
 	&:hover {
 		background-color: $color-info;
 		color: $color-white;
@@ -187,13 +192,13 @@
     background-color: $color-pink;
     color: $color-white;
 }
- 
+
 .tag-arrow:hover {
     background-color: $color-dark;
     color: $color-white;
 }
 
- 
+
 .tag-arrow:after {
     display: inline-block;
     border: 14px solid;
@@ -206,8 +211,8 @@
     content: "";
     display: inline-block;
 }
- 
- 
+
+
 .tag-arrow:hover:after {
     border-color: transparent transparent transparent $color-dark;
 }
@@ -215,8 +220,8 @@
 .label {
 	background-color: $color-dark;
 	color: $color-white;
-	padding: 3px 6px;
-	border-radius: 6px;
+	padding: 1px 6px;
+	border-radius: 2px;
 	margin: 1em 4px;
 	font-size: 13px;
 	text-transform: uppercase;

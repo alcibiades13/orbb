@@ -172,7 +172,7 @@
 
 /* Transitions */
 /* line 42, ../sass/utilities/_utilities.scss */
-.ease, .accordion ul li a {
+.ease, .tabs ul li a {
   transition: all 0.3s ease-in-out;
 }
 
@@ -897,101 +897,104 @@ img {
 =====================================*/
 /* BUTTON BASE */
 /* line 6, ../sass/modules/_btn.scss */
-.btn, .btn-default, .btn-ok, .btn-info, .btn-err, .btn-black, .btn-square, .btn-large, .btn-small, .cta, .btn-tr, .btn-info-tr, .btn-err-tr, .btn-ok-tr, .btn-danger-tr, .banner-btns .btn-full {
+.btn, .btn-default, .btn-ok, .btn-info, .btn-err, .btn-danger, .btn-black, .btn-large, .btn-small, .cta, .btn-tr, .btn-info-tr, .btn-err-tr, .btn-ok-tr, .btn-danger-tr, .banner-btns .btn-full {
   line-height: 1.5rem;
-  padding: 8px 16px;
-  border-radius: 5px;
-  border: 1px solid #999;
+  padding: 6px 16px;
+  border: none;
   color: #1f1f1f;
   text-decoration: none;
   display: inline-block;
-  box-shadow: 0 -1px 3px #DDD inset;
+  transition: all 0.25s ease-in-out;
 }
 
 /* DEFAULT BUTTON */
-/* line 18, ../sass/modules/_btn.scss */
+/* line 19, ../sass/modules/_btn.scss */
 .btn-default {
   background-color: #f1f1f1;
   color: #1f1f1f;
 }
-/* line 24, ../sass/modules/_btn.scss */
+/* line 25, ../sass/modules/_btn.scss */
 .btn-default:hover {
   background-color: #e4e4e4;
 }
 
-/* line 29, ../sass/modules/_btn.scss */
+/* line 30, ../sass/modules/_btn.scss */
 .btn-ok {
   background-color: #41a839;
   color: white;
 }
-/* line 35, ../sass/modules/_btn.scss */
+/* line 36, ../sass/modules/_btn.scss */
 .btn-ok:hover {
   background-color: #3a9533;
 }
 
-/* line 40, ../sass/modules/_btn.scss */
+/* line 41, ../sass/modules/_btn.scss */
 .btn-info {
-  background-color: #2E66C7;
+  background-color: #487DF0;
   color: white;
 }
-/* line 46, ../sass/modules/_btn.scss */
+/* line 47, ../sass/modules/_btn.scss */
 .btn-info:hover {
-  background-color: #295bb2;
+  background-color: #306cee;
 }
 
-/* line 51, ../sass/modules/_btn.scss */
+/* line 52, ../sass/modules/_btn.scss */
 .btn-err {
-  background-color: #D63E3E;
+  background-color: #ED5555;
   color: white;
 }
-/* line 57, ../sass/modules/_btn.scss */
+/* line 58, ../sass/modules/_btn.scss */
 .btn-err:hover {
-  background-color: #cf2c2c;
+  background-color: #eb3e3e;
 }
 
-/* line 62, ../sass/modules/_btn.scss */
+/* line 63, ../sass/modules/_btn.scss */
+.btn-danger {
+  background-color: #FF8205;
+  color: white;
+}
+/* line 69, ../sass/modules/_btn.scss */
+.btn-danger:hover {
+  background-color: #eb7500;
+}
+
+/* line 74, ../sass/modules/_btn.scss */
 .btn-black {
   background-color: #222;
   color: white;
   border: 1px solid #DDD;
 }
-/* line 69, ../sass/modules/_btn.scss */
+/* line 81, ../sass/modules/_btn.scss */
 .btn-black:hover {
   background-color: #151515;
 }
 
-/* SQUARED BUTTON */
-/* line 76, ../sass/modules/_btn.scss */
-.btn-square {
-  border-radius: 0;
-}
-
 /* BUTTON SIZES */
-/* line 83, ../sass/modules/_btn.scss */
+/* line 88, ../sass/modules/_btn.scss */
 .btn-large {
   padding: 12px 28px;
 }
 
-/* line 89, ../sass/modules/_btn.scss */
+/* line 94, ../sass/modules/_btn.scss */
 .btn-small {
   padding: 2px 8px;
 }
 
 /* CALL TO ACTION */
-/* line 97, ../sass/modules/_btn.scss */
+/* line 102, ../sass/modules/_btn.scss */
 .cta {
   font-size: 24px;
   padding: 1rem 3rem;
   background-color: #41a839;
   color: white;
 }
-/* line 105, ../sass/modules/_btn.scss */
+/* line 110, ../sass/modules/_btn.scss */
 .cta:hover {
   background-color: #3a9533;
 }
 
 /* TRANPARENT BACKGROUND */
-/* line 112, ../sass/modules/_btn.scss */
+/* line 117, ../sass/modules/_btn.scss */
 .btn-tr, .btn-info-tr, .btn-err-tr, .btn-ok-tr, .btn-danger-tr, .banner-btns .btn-full {
   background-color: transparent;
   border: 1px solid #222;
@@ -999,62 +1002,62 @@ img {
   box-shadow: none;
   transition: all 0.2s ease-in-out;
 }
-/* line 120, ../sass/modules/_btn.scss */
+/* line 125, ../sass/modules/_btn.scss */
 .btn-tr:hover, .btn-info-tr:hover, .btn-err-tr:hover, .btn-ok-tr:hover, .btn-danger-tr:hover, .banner-btns .btn-full:hover {
   background-color: #222;
   color: #f1f1f1;
 }
 
-/* line 126, ../sass/modules/_btn.scss */
+/* line 131, ../sass/modules/_btn.scss */
 .btn-info-tr {
   background-color: transparent;
-  border: 1px solid #2E66C7;
-  color: #2E66C7;
+  border: 1px solid #487DF0;
+  color: #487DF0;
 }
-/* line 132, ../sass/modules/_btn.scss */
+/* line 137, ../sass/modules/_btn.scss */
 .btn-info-tr:hover {
-  background-color: #2E66C7;
+  background-color: #487DF0;
   color: #f1f1f1;
 }
 
-/* line 138, ../sass/modules/_btn.scss */
+/* line 143, ../sass/modules/_btn.scss */
 .btn-err-tr {
   background-color: transparent;
-  border: 1px solid #D63E3E;
-  color: #D63E3E;
+  border: 1px solid #ED5555;
+  color: #ED5555;
 }
-/* line 144, ../sass/modules/_btn.scss */
+/* line 149, ../sass/modules/_btn.scss */
 .btn-err-tr:hover {
-  background-color: #D63E3E;
+  background-color: #ED5555;
   color: #f1f1f1;
 }
 
-/* line 150, ../sass/modules/_btn.scss */
+/* line 155, ../sass/modules/_btn.scss */
 .btn-ok-tr {
   background-color: transparent;
   border: 1px solid #41a839;
   color: #41a839;
 }
-/* line 156, ../sass/modules/_btn.scss */
+/* line 161, ../sass/modules/_btn.scss */
 .btn-ok-tr:hover {
   background-color: #41a839;
   color: #f1f1f1;
 }
 
-/* line 162, ../sass/modules/_btn.scss */
+/* line 167, ../sass/modules/_btn.scss */
 .btn-danger-tr {
   background-color: transparent;
   border: 1px solid #F25E3D;
   color: #F25E3D;
 }
-/* line 168, ../sass/modules/_btn.scss */
+/* line 173, ../sass/modules/_btn.scss */
 .btn-danger-tr:hover {
   background-color: #F25E3D;
   color: #f1f1f1;
 }
 
 /* Tags */
-/* line 178, ../sass/modules/_btn.scss */
+/* line 183, ../sass/modules/_btn.scss */
 .tag-arrow {
   display: inline-block;
   position: relative;
@@ -1068,13 +1071,13 @@ img {
   color: #f1f1f1;
 }
 
-/* line 191, ../sass/modules/_btn.scss */
+/* line 196, ../sass/modules/_btn.scss */
 .tag-arrow:hover {
   background-color: #222;
   color: #f1f1f1;
 }
 
-/* line 197, ../sass/modules/_btn.scss */
+/* line 202, ../sass/modules/_btn.scss */
 .tag-arrow:after {
   display: inline-block;
   border: 14px solid;
@@ -1088,16 +1091,16 @@ img {
   display: inline-block;
 }
 
-/* line 211, ../sass/modules/_btn.scss */
+/* line 216, ../sass/modules/_btn.scss */
 .tag-arrow:hover:after {
   border-color: transparent transparent transparent #222;
 }
 
-/* line 215, ../sass/modules/_btn.scss */
+/* line 220, ../sass/modules/_btn.scss */
 .label, .label-dark, .label-info, .label-danger, .label-ok, .label-err {
   background-color: #222;
   color: #f1f1f1;
-  padding: 3px 6px;
+  padding: 1px 6px;
   border-radius: 6px;
   margin: 1em 4px;
   font-size: 13px;
@@ -1107,33 +1110,33 @@ img {
   text-decoration: none;
 }
 
-/* line 228, ../sass/modules/_btn.scss */
+/* line 233, ../sass/modules/_btn.scss */
 .label-dark {
   background-color: #222;
 }
 
-/* line 235, ../sass/modules/_btn.scss */
+/* line 240, ../sass/modules/_btn.scss */
 .label-info {
-  background-color: #2E66C7;
+  background-color: #487DF0;
 }
 
-/* line 241, ../sass/modules/_btn.scss */
+/* line 246, ../sass/modules/_btn.scss */
 .label-danger {
   background-color: #F25E3D;
 }
 
-/* line 247, ../sass/modules/_btn.scss */
+/* line 252, ../sass/modules/_btn.scss */
 .label-ok {
   background-color: #41a839;
 }
 
-/* line 253, ../sass/modules/_btn.scss */
+/* line 258, ../sass/modules/_btn.scss */
 .label-err {
-  background-color: #D63E3E;
+  background-color: #ED5555;
 }
 
 /* Tooltips */
-/* line 262, ../sass/modules/_btn.scss */
+/* line 267, ../sass/modules/_btn.scss */
 .trigger, .trigger-left {
   height: 50px;
   padding: 0 30px;
@@ -1145,7 +1148,7 @@ img {
   display: inline-block;
   position: relative;
 }
-/* line 275, ../sass/modules/_btn.scss */
+/* line 280, ../sass/modules/_btn.scss */
 .trigger:hover .tooltip, .trigger-left:hover .tooltip, .trigger:hover .tooltip-left, .trigger-left:hover .tooltip-left {
   visibility: visible;
   opacity: 1;
@@ -1153,7 +1156,7 @@ img {
   transform: translate(10px, 0);
 }
 
-/* line 284, ../sass/modules/_btn.scss */
+/* line 289, ../sass/modules/_btn.scss */
 .tooltip, .tooltip-left {
   visibility: hidden;
   opacity: 0;
@@ -1169,7 +1172,7 @@ img {
   height: 100%;
   white-space: nowrap;
 }
-/* line 300, ../sass/modules/_btn.scss */
+/* line 305, ../sass/modules/_btn.scss */
 .tooltip::before, .tooltip-left::before {
   content: "";
   display: inline-block;
@@ -1181,18 +1184,18 @@ img {
   top: 15px;
 }
 
-/* line 315, ../sass/modules/_btn.scss */
+/* line 320, ../sass/modules/_btn.scss */
 .trigger-left:hover .tooltip, .trigger-left:hover .tooltip-left {
   -webkit-transform: translate(-10px, 0);
   transform: translate(-10px, 0);
 }
 
-/* line 321, ../sass/modules/_btn.scss */
+/* line 326, ../sass/modules/_btn.scss */
 .tooltip-left {
   left: initial;
   right: calc(100% + 10px);
 }
-/* line 327, ../sass/modules/_btn.scss */
+/* line 332, ../sass/modules/_btn.scss */
 .tooltip-left::after {
   content: "";
   display: inline-block;
@@ -1204,7 +1207,7 @@ img {
   left: none;
   top: 15px;
 }
-/* line 339, ../sass/modules/_btn.scss */
+/* line 344, ../sass/modules/_btn.scss */
 .tooltip-left::before {
   content: none;
 }
@@ -1320,7 +1323,7 @@ hr {
 
 /* line 67, ../sass/modules/_navs.scss */
 .nav-pills li a {
-  background-color: #2E66C7;
+  background-color: #487DF0;
   border-radius: 5px;
   color: #f1f1f1;
   line-height: 50px;
@@ -1328,7 +1331,7 @@ hr {
 }
 /* line 75, ../sass/modules/_navs.scss */
 .nav-pills li.active a, .nav-pills li:hover a {
-  color: #2E66C7;
+  color: #487DF0;
   background-color: white;
 }
 
@@ -1487,7 +1490,7 @@ hr {
 /* line 145, ../sass/modules/_misc.scss */
 .breadcrumbs li a, .breadcrumbs-dark li a {
   text-decoration: none;
-  color: #2E66C7;
+  color: #487DF0;
 }
 /* line 149, ../sass/modules/_misc.scss */
 .breadcrumbs li a:hover, .breadcrumbs-dark li a:hover {
@@ -1524,21 +1527,21 @@ hr {
   color: #999;
 }
 
-/* Accordion */
+/* Tabs */
 /* line 189, ../sass/modules/_misc.scss */
-.accordion {
+.tabs {
   position: relative;
   margin-bottom: 144px;
 }
 /* line 194, ../sass/modules/_misc.scss */
-.accordion ul {
+.tabs ul {
   list-style-type: none;
   width: 100%;
   display: block;
   border: 1px solid #999;
 }
 /* line 200, ../sass/modules/_misc.scss */
-.accordion ul li {
+.tabs ul li {
   display: inline-block;
   float: left;
   width: 33.3333333333%;
@@ -1547,7 +1550,7 @@ hr {
   text-align: center;
 }
 /* line 208, ../sass/modules/_misc.scss */
-.accordion ul li a {
+.tabs ul li a {
   text-decoration: none;
   color: #f1f1f1;
   display: inline-block;
@@ -1556,21 +1559,21 @@ hr {
   background-color: #333;
 }
 /* line 218, ../sass/modules/_misc.scss */
-.accordion ul li:last-child {
+.tabs ul li:last-child {
   border-right: 0;
 }
 /* line 222, ../sass/modules/_misc.scss */
-.accordion ul li.active a {
+.tabs ul li.active a {
   background-color: #ef685e;
   color: #f1f1f1;
 }
 /* line 229, ../sass/modules/_misc.scss */
-.accordion .accordion-text {
+.tabs .tabs-text {
   overflow: hidden;
   *zoom: 1;
 }
 /* line 233, ../sass/modules/_misc.scss */
-.accordion p {
+.tabs p {
   display: block;
   position: absolute;
   top: 35px;
@@ -1581,7 +1584,7 @@ hr {
   background-color: #f1f1f1;
 }
 /* line 243, ../sass/modules/_misc.scss */
-.accordion p:not(:first-child) {
+.tabs p:not(:first-child) {
   display: none;
 }
 
@@ -2062,7 +2065,7 @@ h2 {
 }
 
 /* line 11, ../sass/theme/_theme.scss */
-.btn, .btn-default, .btn-ok, .btn-info, .btn-err, .btn-black, .btn-square, .btn-large, .btn-small, .cta, .btn-tr, .btn-info-tr, .btn-err-tr, .btn-ok-tr, .btn-danger-tr, .banner-btns .btn-full {
+.btn, .btn-default, .btn-ok, .btn-info, .btn-err, .btn-danger, .btn-black, .btn-large, .btn-small, .cta, .btn-tr, .btn-info-tr, .btn-err-tr, .btn-ok-tr, .btn-danger-tr, .banner-btns .btn-full {
   margin: 5px;
 }
 
@@ -2488,7 +2491,7 @@ ul.tag-wrapper li {
 /* line 447, ../sass/theme/_theme.scss */
 .preview-nav span a {
   text-decoration: none;
-  color: #2E66C7;
+  color: #487DF0;
   line-height: 30px;
 }
 

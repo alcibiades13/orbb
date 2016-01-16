@@ -8,7 +8,7 @@ $(document).ready(function () {
 	// initializing...
 	function init() {
 
-		accordion();
+		tabs();
 		progressBar();
 		slider();
 		expandSlider();
@@ -17,17 +17,17 @@ $(document).ready(function () {
 	}
 
 
-	// accordion tabbing
-	function accordion() {
+	// tabs
+	function tabs() {
 
-		var $accordion = $('.accordion');
-		 $accordion.find('a').on('click', function(e) {
+		var $tabs = $('.tabs');
+		 $tabs.find('a').on('click', function(e) {
 		 	e.preventDefault();
 			var accId = $(this).parent().index();
 			$(this).parent().addClass('active').siblings().removeClass('active');
-			$accordionP = $accordion.find('p').eq(accId);
-			$accordionP.css('display', 'block');
-			$accordionP.siblings().css('display', 'none');
+			$tabsP = $tabs.find('p').eq(accId);
+			$tabsP.css('display', 'block');
+			$tabsP.siblings().css('display', 'none');
 		});
 
 	}
@@ -47,7 +47,7 @@ $(document).ready(function () {
 		var progressWidth = $progress.data( "progressValue" );
 		$progress.animate({
 			'width': progressWidth+ '%'
-		},1000);		
+		},1000);
 
 	}
 
@@ -60,7 +60,7 @@ $(document).ready(function () {
 		$('.slider-next').on('click', function (e) {
 			e.preventDefault();
 
-			// slide container	
+			// slide container
 			$slider = $(this).parent();
 			var numOfSlides = $slider.find('.slide').length;
 
@@ -73,7 +73,7 @@ $(document).ready(function () {
 			// set the next active slide
 			if(curIndex >= numOfSlides - 1) {
 				nextIndex = 0;
-			} 
+			}
 			else {
 				nextIndex = curIndex + 1;
 			}
@@ -95,7 +95,7 @@ $(document).ready(function () {
 		$('.slider-prev').on('click', function (e) {
 			e.preventDefault();
 
-			// slide container	
+			// slide container
 			$slider = $(this).parent();
 			var numOfSlides = $slider.find('.slide').length;
 
@@ -116,7 +116,7 @@ $(document).ready(function () {
 			// set the prev active slide
 			if(curIndex === 0) {
 				prevIndex = numOfSlides - 1;
-			} 
+			}
 			else {
 				prevIndex = curIndex - 1;
 			}
@@ -193,5 +193,7 @@ $(document).ready(function () {
 
 	// expand slider minimum height on resize, otherwise it will be zero
 	$(window).resize(expandSlider);
+
+
 	init();
 });

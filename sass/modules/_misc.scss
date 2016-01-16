@@ -184,9 +184,9 @@
 	}
 }
 
-/* Accordion */
+/* Tabs */
 
-.accordion {
+.tabs {
 
 	position: relative;
 	margin-bottom: ($general-margin * 3);
@@ -226,7 +226,7 @@
 		}
 	}
 
-	.accordion-text {
+	.tabs-text {
 		@include clearfix;
 	}
 

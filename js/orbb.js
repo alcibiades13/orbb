@@ -23,9 +23,9 @@ $(document).ready(function () {
 		var $tabs = $('.tabs');
 		 $tabs.find('a').on('click', function(e) {
 		 	e.preventDefault();
-			var accId = $(this).parent().index();
+			var tabId = $(this).parent().index();
 			$(this).parent().addClass('active').siblings().removeClass('active');
-			$tabsP = $tabs.find('p').eq(accId);
+			$tabsP = $tabs.find('p').eq(tabId);
 			$tabsP.css('display', 'block');
 			$tabsP.siblings().css('display', 'none');
 		});
